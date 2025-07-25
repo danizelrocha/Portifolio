@@ -325,11 +325,16 @@ footer .line-footer p a {
 }
 
 /* @MEDIA */
-@media screen and (max-widt: 1344px) {
+@media screen and (max-width: 1344px) {
 
     /* General class */
     .flex {
         flex-direction: column;
+    }
+
+    h2.title {
+        font-size: 34px;
+        line-height: 30px;
     }
 
     .up-site .flex {
@@ -340,7 +345,6 @@ footer .line-footer p a {
         font-size: 34px;
         line-height: 30px;
     }
-
 
     /* header */
     .menu-desktop,
@@ -367,9 +371,53 @@ footer .line-footer p a {
     }
 
     /* specialties */
-    section.specialties{
+    section.specialties {
         padding: 40px 8%;
     }
 
+    /* about */
+    section.about {
+        padding: 80px 4%;
+    }
 
+    .about .txt-about h2 {
+        font-size: 34px;
+        line-height: 35px;
+        text-align: center;
+    }
+
+    .btn-social {
+        text-align: center;
+    }
+
+    .img-about {
+        width: 100%;
+        max-width: 360px;
+        margin: 0 auto;
+    }
+
+    /* portfólio */
+    section.portfolio {
+        padding: 80px 8%;
+    }
+
+    .img-port {
+        width: 100%;
+        max-width: 360px;
+        margin: 0 auto;
+    }
+
+    section.portfolio .flex {
+        gap: 60px;
+    }
+
+    /* footer */
+    footer .flex {
+        flex-direction: column;
+        gap: 30px; 
+    }
+
+    footer .line-footer {
+        text-align: center;
+    }
 }
