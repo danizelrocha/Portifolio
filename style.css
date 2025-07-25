@@ -79,6 +79,30 @@ header nav ul li {
     padding: 0 40px;
 }
 
+/* MENU MOBILE */
+.menu-mobile{
+    background-color: red;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 9999999;
+    width: 70%;
+}
+
+.menu-mobile nav ul{
+    text-align: right;
+}
+
+.menu-mobile nav ul li a{
+    color: #fff;
+    font-size:20px;
+    font-weight: 300;
+    pad: 20px 4%;
+
+}
+
+
 
 /* UP-SITE */
 
