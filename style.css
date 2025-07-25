@@ -202,6 +202,7 @@ section.portfolio{
 
 section.portfolio .flex{
     justify-content: space-around;
+    margin-top: 60px;
 }
 
 .img-port{
@@ -213,7 +214,6 @@ section.portfolio .flex{
    cursor: pointer;
    border-radius: 40px;
    position: relative;
-
 }
 
 .img-port:hover{
@@ -232,6 +232,58 @@ section.portfolio .flex{
     align-items: center;
     justify-content: center;
     font-size: 24px;
-    font-weight: 600;
+    font-weight: 400;
     color: #fff;
+    opacity: 0;
+    transition: .5s;
 }
+
+.overlay:hover{
+    opacity: 1;
+}
+
+/* FORM */
+section.form{
+    padding: 80px 4%;
+}
+
+form{
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+form input, form textarea{
+    width: 100%;
+    background-color: #242424;
+    border: 0;
+    outline: 0;
+    padding: 20px 15px;
+    border-radius: 15px;
+    color: #fff;
+    font-size: 18px;
+}
+
+form input::placeholder { 
+    color: #69bd6191;
+    opacity: 1;
+}
+
+form textarea{
+    resize: none;
+    max-height: 200px;
+
+
+}
+
+
+
+
+
+
+
+
+/*form textarea::placeholder*/
