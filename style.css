@@ -157,7 +157,7 @@ section.about{
     padding: 40px 4%;
 }
 
-section.about.flex{
+section.about .flex{
     align-items: center;
     gap: 60px;
 }
