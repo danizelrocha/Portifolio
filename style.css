@@ -1,3 +1,4 @@
+
 /* Geral */
 *{
     margin: 0;
@@ -31,8 +32,16 @@ body{
     transition: .2s;
 }
 
-/* Casbeçalho */
+h2.title{
+ color: #fff;
+ font-size: 38px;
+ text-align: center;
+}
 
+h2.title span{
+    color: #69bd61;
+}
+/* Casbeçalho */
 header{
     padding: 40px 4%;
 }
@@ -67,7 +76,6 @@ header nav ul li{
 .btn-contato button:hover{
     box-shadow: 0px 0px 8px  #81ff76;
     transform: scale(1.08);
-    transition: .2s;
 }
 
 /* UP-SITE */
@@ -95,5 +103,66 @@ section.up-site .flex{
 .up-site .txt-up-site p{
     color: #fff;
     margin: 40px 0;
-
 } 
+
+.up-site .img-up-site img{
+    position: relative;
+    animation: float 2s ease-in-out infinite alternate;
+}
+
+@keyframes float{
+    0%{
+        top: 0;
+    }
+    100%{
+        top: 30px;
+    }
+}
+
+/* Specialties */
+section.specialties{
+    padding: 40px 4%;
+}
+
+section.specialties .flex{
+    gap: 60px;
+
+}
+.specialties .specialties-box{
+   color: #fff;
+   padding: 40px;
+   border-radius: 20px;
+   margin-top: 45px;
+   transition: .2s;
+}
+
+.specialties .specialties-box:hover{
+    transform: scale(1.08);
+    box-shadow: 0 0 16px #ffffff78;
+}
+
+.specialties .specialties-box i{
+    font-size: 70px;
+    color: #69bd61;
+}
+
+.specialties .specialties-box h3{
+    font-size: 28px;
+    margin: 15px 0;
+
+}
+
+/* About */
+section.about{
+    padding: 40px 4%;
+}
+
+section.about.flex{
+    align-items: center;
+    gap: 60px;
+}
+
+.about .txt-about{
+    color: #fff;
+
+}
