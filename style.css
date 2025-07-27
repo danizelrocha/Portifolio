@@ -21,10 +21,11 @@ body {
 }
 
 .btn-contato button {
-    padding: 10px 40px;
+    padding: 20px 40px;
     font-size: 18px;
     font-weight: 600;
-    background-color: #69bd61;
+    color: #fff;
+    background-color: #551a8b;
     border: 0;
     border-radius: 30px;
     cursor: pointer;
@@ -38,12 +39,12 @@ h2.title {
 }
 
 h2.title span {
-    color: #69bd61;
+    color: #551a8b;
 }
 
 button:hover,
 form .btn-enviar input[type=submit]:hover {
-    box-shadow: 0px 0px 8px #81ff76;
+    box-shadow: 0px 0px 8px #714d92;
     transform: scale(1.08);
 }
 
@@ -82,7 +83,7 @@ header nav.menu-desktop ul li {
 /* MENU MOBILE */
 
 .btn-open-menu i{
-    color: #69bd61;
+    color: #551a8b;
     font-size: 40px;
 
 }
@@ -99,7 +100,7 @@ header nav.menu-desktop ul li {
 }
 
 .menu-mobile.open-menu{
-    width: 70%;
+    width: 60%;
     
 }
 
@@ -108,11 +109,11 @@ header nav.menu-desktop ul li {
 }
 
 .menu-mobile .btn-close{
-    padding: 20px 5%;
+    padding: 30px 5%;
 }
 
 .menu-mobile .btn-close i{
-    color: #69bd61;
+    color: #551a8b;
     font-size: 28px;
 }
 
@@ -130,7 +131,7 @@ header nav.menu-desktop ul li {
 }
 
 .menu-mobile nav ul li a:hover {
-    background-color: #69bd61;
+    background-color: #551a8b;
     border-radius: 4px;
     color: #000;
 }
@@ -164,7 +165,7 @@ section.up-site .flex {
 }
 
 .up-site .txt-up-site h1 span {
-    color: #69bd61;
+    color: #551a8b;
 }
 
 .up-site .txt-up-site p {
@@ -211,7 +212,7 @@ section.specialties .flex {
 
 .specialties .specialties-box i {
     font-size: 70px;
-    color: #69bd61;
+    color: #551a8b;
 }
 
 .specialties .specialties-box h3 {
@@ -240,7 +241,7 @@ section.about .flex {
 }
 
 .about .txt-about h2 span {
-    color: #69bd61;
+    color: #551a8b;
     display: block;
 }
 
@@ -249,14 +250,13 @@ section.about .flex {
     text-align: justify;
 }
 
-.btn-social button {
+.btn-social a i {
     margin: 0 5px;
     width: 60px;
     height: 60px;
-    border-radius: 50%;
-    border: none;
-    background-color: #69bd61;
-    font-size: 22px;
+    
+    
+    font-size: 40px;
     cursor: pointer;
     transition: .2s;
 }
@@ -338,7 +338,7 @@ form textarea {
 
 form input::placeholder,
 form textarea::placeholder {
-    color: #69bd6191;
+    color: #fff;
 }
 
 form textarea {
@@ -353,8 +353,8 @@ form .btn-enviar {
 
 form .btn-enviar input[type=submit] {
     width: 120px;
-    background-color: #69bd61;
-    color: #000;
+    background-color: #551a8b;
+    color: #fff;
     font-size: 700;
     cursor: pointer;
     transition: .2s;
@@ -375,11 +375,11 @@ footer .line-footer {
 }
 
 .border {
-    border-top: 2px solid #69bd61;
+    border-top: 2px solid #551a8b;
 }
 
 footer .line-footer p i {
-    color: #69bd61;
+    color: #551a8b;
     font-size: 22px;
 }
 
