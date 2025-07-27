@@ -65,7 +65,7 @@ header a {
     transition: .2s;
 }
 
-header a:hover {
+header nav.menu-desktop a:hover {
     color: #fff;
     transform: scale(1.08);
 }
@@ -74,38 +74,52 @@ header nav ul {
     list-style-type: none;
 }
 
-header nav ul li {
+header nav.menu-desktop ul li {
     display: inline-block;
     padding: 0 40px;
 }
 
 /* MENU MOBILE */
-.menu-mobile{
-    background-color: red;
+.menu-mobile {
+    background-color: #000;
     height: 100vh;
-    position: fixed;
+    position: fixed;   
     top: 0;
     right: 0;
-    z-index: 9999999;
-    width: 70%;
+    z-index: 99999;
+    width: 0%;
+    overflow: hidden;
 }
 
-.menu-mobile nav ul{
+.menu-mobile .btn-close{
+    padding: 20px 5%;
+}
+
+.menu-mobile .btn-close i{
+    color: #69bd61;
+    font-size: 28px;
+}
+
+.menu-mobile nav ul {
     text-align: right;
 }
 
-.menu-mobile nav ul li a{
+.menu-mobile nav ul li a {
     color: #fff;
-    font-size:20px;
+    font-size: 20px;
     font-weight: 300;
-    pad: 20px 4%;
+    padding: 15px 8%;
+    display: block;
 
 }
 
-
+.menu-mobile nav ul li a:hover {
+    background-color: #69bd61;
+    border-radius: 4px;
+    color: #000;
+}
 
 /* UP-SITE */
-
 section.up-site {
     padding: 40px 4%;
 }
@@ -303,9 +317,7 @@ form textarea::placeholder {
 form textarea {
     resize: none;
     max-height: 200px;
-
 }
-
 
 form .btn-enviar {
     margin-top: 20px;
@@ -374,7 +386,6 @@ footer .line-footer p a {
     .menu-desktop,
     .btn-contato {
         display: none;
-
     }
 
     /* UP-Site */
@@ -438,7 +449,7 @@ footer .line-footer p a {
     /* footer */
     footer .flex {
         flex-direction: column;
-        gap: 30px; 
+        gap: 30px;
     }
 
     footer .line-footer {
