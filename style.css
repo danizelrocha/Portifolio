@@ -80,6 +80,12 @@ header nav.menu-desktop ul li {
 }
 
 /* MENU MOBILE */
+
+.btn-open-menu i{
+    color: #69bd61;
+    font-size: 40px;
+
+}
 .menu-mobile {
     background-color: #000;
     height: 100vh;
@@ -89,6 +95,16 @@ header nav.menu-desktop ul li {
     z-index: 99999;
     width: 0%;
     overflow: hidden;
+    transition: .5s;
+}
+
+.menu-mobile.open-menu{
+    width: 70%;
+    
+}
+
+.menu-mobile.open-menu ~ .overlay-menu{
+    display: block;
 }
 
 .menu-mobile .btn-close{
@@ -117,6 +133,17 @@ header nav.menu-desktop ul li {
     background-color: #69bd61;
     border-radius: 4px;
     color: #000;
+}
+
+.overlay-menu{
+    background-color: #0000009d;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 88888;
+    display: none;
 }
 
 /* UP-SITE */
