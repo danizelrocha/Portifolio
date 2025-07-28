@@ -1,4 +1,4 @@
-/* Geral */
+/* GENERAL */
 * {
     margin: 0;
     padding: 0;
@@ -48,7 +48,7 @@ form .btn-enviar input[type=submit]:hover {
     transform: scale(1.08);
 }
 
-/* Casbeçalho */
+/* HEADER - NAV */
 header {
     padding: 40px 4%;
 }
@@ -189,7 +189,7 @@ section.up-site .flex {
     }
 }
 
-/* Specialties */
+/* SPECIALTIES */
 section.specialties {
     padding: 40px 4%;
 }
@@ -221,7 +221,11 @@ section.specialties .flex {
     margin: 15px 0;
 }
 
-/* About */
+.specialties .specialties-box h3 p{
+    text-align: justify;
+}
+
+/* ABOUT */
 section.about {
     padding: 80px 4%;
 }
@@ -252,17 +256,23 @@ section.about .flex {
 }
 
 .btn-social a i {
-    margin: 0 5px;
+    margin: 0 14px;
     width: 60px;
     height: 60px;
-
-
     font-size: 40px;
     cursor: pointer;
     transition: .2s;
+
 }
 
-/*Portifólio*/
+.btn-social a i:hover{
+    transform: scale(1.08);
+    text-decoration: none;
+    color: #ab51ff;
+    
+}
+
+/*PORTFOLIO*/
 section.portfolio {
     padding: 80px 4%;
     box-shadow: 0 0 40px 10px #ffffff17;
@@ -368,7 +378,7 @@ footer {
 }
 
 footer .flex {
-    justify-content: space-between;
+    justify-content: end;
 }
 
 footer .line-footer {
@@ -388,9 +398,11 @@ footer .line-footer p a {
     color: #fff;
 }
 
-/* RESPOSTA AUTOMATICA */
+/* ================== */
+/* AUTOMATIC RESPONSE */
+/* ================== */
 
-/* Estilos para as mensagens flutuantes */
+/* STYLES FOR FLOATING MESSAGES */
 .floating-message {
     position: fixed;
     top: 20px;
@@ -404,6 +416,8 @@ footer .line-footer p a {
     display: flex;
     align-items: center;
     animation: fadeIn 0.3s ease-out;
+    max-width: 90%;
+    box-sizing: border-box;
 }
 
 .message-success {
@@ -419,15 +433,11 @@ footer .line-footer p a {
     width: 20px;
     height: 20px;
     fill: white;
+
 }
 
-/* Animações */
+/* ANIMATIONS */
 @keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateX(-50%) translateY(-20px);
-    }
-
     to {
         opacity: 1;
         transform: translateX(-50%) translateY(0);
@@ -435,40 +445,18 @@ footer .line-footer p a {
 }
 
 @keyframes fadeOut {
-    from {
-        opacity: 1;
-        transform: translateX(-50%) translateY(0);
-    }
-
     to {
         opacity: 0;
         transform: translateX(-50%) translateY(-20px);
     }
 }
 
-/* Estilo para o formulário (opcional) */
-.form-submit-btn {
-    transition: all 0.3s ease;
-}
-
-.form-submit-btn:disabled {
-    opacity: 0.7;
-    cursor: not-allowed;
-}
-
-.message-content {
-  line-height: 1.4;
-}
-
-.message-content strong {
-  font-weight: 600;
-  display: block;
-}
-
-/* @MEDIA */
+/* ========== */
+/*   @MEDIA   */
+/* ========== */
 @media screen and (max-width: 1100px) {
 
-    /* General class */
+    /* GENERAL CLASS */
     .flex {
         flex-direction: column;
     }
@@ -487,13 +475,13 @@ footer .line-footer p a {
         line-height: 30px;
     }
 
-    /* header */
+    /* HEADER */
     .menu-desktop,
     .btn-contato {
         display: none;
     }
 
-    /* UP-Site */
+    /* UP-SITE */
     section.up-site .flex {
         gap: 40px;
     }
@@ -510,12 +498,12 @@ footer .line-footer p a {
         width: 100%;
     }
 
-    /* specialties */
+    /* SPECIALTIES */
     section.specialties {
         padding: 40px 8%;
     }
 
-    /* about */
+    /* ABOUT */
     section.about {
         padding: 80px 4%;
     }
@@ -536,7 +524,7 @@ footer .line-footer p a {
         margin: 0 auto;
     }
 
-    /* portfólio */
+    /* PORTFOLIO */
     section.portfolio {
         padding: 80px 8%;
     }
@@ -551,7 +539,7 @@ footer .line-footer p a {
         gap: 60px;
     }
 
-    /* footer */
+    /* FOOTER */
     footer .flex {
         flex-direction: column;
         gap: 30px;
@@ -561,3 +549,52 @@ footer .line-footer p a {
         text-align: center;
     }
 }
+
+
+
+
+/* .specialties-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: #f8f9fa;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.specialties-box i {
+  font-size: 2.5rem;
+  color: #0d6efd; /* Cor do ícone (azul Bootstrap) 
+}
+
+.specialties-box h3 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #212529;
+}
+
+.skills-list {
+  width: 100%;
+  padding-left: 1rem;
+  list-style-type: none;
+}
+
+.skills-list li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #e9ecef;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Responsividade */
+/* @media (max-width: 768px) {
+  .specialties-box {
+    padding: 1.5rem;
+  }
+} */ 
+
