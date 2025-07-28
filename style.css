@@ -80,6 +80,10 @@ header nav.menu-desktop ul li {
     padding: 0 40px;
 }
 
+.logo a img{
+    border-radius: 50%;
+}
+
 /* MENU MOBILE */
 
 .btn-open-menu i {
@@ -241,7 +245,7 @@ section.about .flex {
 
 .about .txt-about h2 {
     font-size: 40px;
-    line-height: 40px;
+    line-height: 50px;
     margin-bottom: 30px;
 }
 
