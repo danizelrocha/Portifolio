@@ -206,29 +206,47 @@
         <div class="interface">
           <h2 class="title">Fala <span>Comigo.</span></h2>
 
-          <form action="">
+          <form
+            action="https://formsubmit.co/danizelrocha@gmail.com"
+            method="POST"
+          >
             <input
               type="text"
-              name="#"
-              id="2"
+              name="nome"
+              id="nome"
               placeholder="*Seu nome:"
               required
             />
             <input
-              type="text"
-              name="#"
-              id="1"
+              type="email"
+              name="email"
+              id="email"
               placeholder="*Seu e-mail:"
               required
             />
-            <input type="text" name="#" id="3" placeholder="Seu telefone:" />
+            <input
+              type="tel"
+              name="telefone"
+              id="telefone"
+              placeholder="Seu telefone:"
+            />
             <textarea
-              name="#"
-              id="4"
+              name="mensagem"
+              id="mensagem"
               placeholder="*Sua mensagem:"
               required
             ></textarea>
-            <div class="btn-enviar"><input type="submit" value="Enviar" /></div>
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="hidden" name="_template" value="basic" />
+            <input
+              type="hidden"
+              name="_subject"
+              value="Novo contato do site!"
+            />
+
+            <div class="btn-enviar">
+              <input type="submit" value="Enviar" id="btnSubmit" />
+            </div>
           </form>
         </div>
       </section>
@@ -239,19 +257,19 @@
         <div class="line-footer">
           <div class="flex">
             <div class="btn-social">
-                <a href="#" class="social-link" data-social="instagram">
-                  <i class="bi bi-instagram"></i>
-                </a>
-                <a href="#" class="social-link" data-social="linkedin">
-                  <i class="bi bi-linkedin"></i>
-                </a>
-                <a href="#" class="social-link" data-social="medium">
-                  <i class="bi bi-medium"></i>
-                </a>
-                <a href="#" class="social-link" data-social="github">
-                  <i class="bi bi-github"></i>
-                </a>
-              </div>
+              <a href="#" class="social-link" data-social="instagram">
+                <i class="bi bi-instagram"></i>
+              </a>
+              <a href="#" class="social-link" data-social="linkedin">
+                <i class="bi bi-linkedin"></i>
+              </a>
+              <a href="#" class="social-link" data-social="medium">
+                <i class="bi bi-medium"></i>
+              </a>
+              <a href="#" class="social-link" data-social="github">
+                <i class="bi bi-github"></i>
+              </a>
+            </div>
           </div>
         </div>
         <div class="line-footer border">
