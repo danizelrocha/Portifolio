@@ -80,15 +80,17 @@ header nav.menu-desktop ul li {
     padding: 0 40px;
 }
 
-.logo a img{
+/* .logo a img{
     border-radius: 50%;
-}
+} */
 
 /* MENU MOBILE */
 
 .btn-open-menu i {
     color: #551a8b;
     font-size: 40px;
+    text-align: start;
+    margin-top: 20px;
 
 }
 
