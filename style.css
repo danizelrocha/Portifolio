@@ -80,19 +80,17 @@ header nav.menu-desktop ul li {
     padding: 0 40px;
 }
 
-/* .logo a img{
-    border-radius: 50%;
-} */
+.logo a img{
+    font-size: 20px;    
+} 
 
 /* MENU MOBILE */
-
-.btn-open-menu i {
+btn-open-menu i {
     color: #551a8b;
-    font-size: 40px;
-    text-align: start;
-    margin-top: 20px;
-
-}
+    font-size: 80px;
+    display: none;
+       
+} 
 
 .menu-mobile {
     background-color: #000;
@@ -485,7 +483,26 @@ footer .line-footer p a {
     .menu-desktop,
     .btn-contato {
         display: none;
+        color: #551a8b;
     }
+
+    .btn-open-menu {
+        display: block; /* Mostra o botão em telas pequenas */
+        cursor: pointer;
+        color: #551a8b;
+        cursor: pointer;
+        border: none;
+        padding: 10px;
+        position: fixed;
+        top: 20px;
+        right: 20px;
+    }
+    
+    .btn-open-menu i {
+        color: #551a8b;
+        font-size: 40px;   
+    } 
+
 
     /* UP-SITE */
     section.up-site .flex {
@@ -555,52 +572,4 @@ footer .line-footer p a {
         text-align: center;
     }
 }
-
-
-
-
-/* .specialties-box {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1rem;
-  max-width: 600px;
-  margin: 0 auto;
-  padding: 2rem;
-  background: #f8f9fa;
-  border-radius: 12px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.specialties-box i {
-  font-size: 2.5rem;
-  color: #0d6efd; /* Cor do ícone (azul Bootstrap) 
-}
-
-.specialties-box h3 {
-  margin: 0;
-  font-size: 1.5rem;
-  color: #212529;
-}
-
-.skills-list {
-  width: 100%;
-  padding-left: 1rem;
-  list-style-type: none;
-}
-
-.skills-list li {
-  padding: 0.5rem 0;
-  border-bottom: 1px solid #e9ecef;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-/* Responsividade */
-/* @media (max-width: 768px) {
-  .specialties-box {
-    padding: 1.5rem;
-  }
-} */ 
 
