@@ -2,33 +2,46 @@
 //  OPEN CLOSED MENU MOBILE BUTTON
 // ==============================
 document.addEventListener("DOMContentLoaded", function () {
-  //  Elementos do DOM
   const btnMenu = document.getElementById("btn-menu");
   const menuMobile = document.getElementById("menu-mobile");
   const overlayMenu = document.getElementById("overlay-menu");
-  const btnClose = document.querySelector(".menu-mobile .btn-close");
+  const btnClose = document.querySelector(".btn-close");
   const body = document.body;
+  const navDesktop = document.querySelector(".menu-desktop .nav-list");
 
-  //  Função para abrir/fechar menu
   function toggleMenu() {
-    menuMobile.classList.toggle("open-menu");
-    body.classList.toggle("menu-open"); // Bloqueia rolagem
+    if (!menuMobile.classList.contains("open-menu")) {
+      // Clona os itens do desktop (exceto mobile-only)
+      const navMobile = navDesktop.cloneNode(true);
+      const mobileOnlyItems = navMobile.querySelectorAll(".mobile-only");
+      mobileOnlyItems.forEach(item => item.remove());
+      
+      // Adiciona o item Contato
+      const contactItem = document.createElement("li");
+      contactItem.innerHTML = '<a href="#contato">Contato</a>';
+      navMobile.appendChild(contactItem);
 
-    // Atualiza o overlay
-    overlayMenu.style.display = menuMobile.classList.contains("open-menu")
-      ? "block"
-      : "none";
+      // Injeta no menu mobile
+      const menuContent = menuMobile.querySelector(".menu-content");
+      menuContent.innerHTML = "";
+      menuContent.appendChild(document.createElement("nav")).appendChild(navMobile);
+    }
+
+    menuMobile.classList.toggle("open-menu");
+    body.classList.toggle("menu-open");
+    overlayMenu.style.display = menuMobile.classList.contains("open-menu") ? "block" : "none";
   }
 
-  // Eventos de clique
+  // Event listeners
   btnMenu.addEventListener("click", toggleMenu);
   btnClose.addEventListener("click", toggleMenu);
   overlayMenu.addEventListener("click", toggleMenu);
 
-  //  Fecha o menu ao clicar em links
-  const menuLinks = document.querySelectorAll(".menu-mobile nav ul li a");
-  menuLinks.forEach((link) => {
-    link.addEventListener("click", toggleMenu);
+  // Fecha ao clicar em links
+  menuMobile.addEventListener("click", function(e) {
+    if (e.target.tagName === "A") {
+      toggleMenu();
+    }
   });
 });
 
