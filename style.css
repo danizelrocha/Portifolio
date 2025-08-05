@@ -57,6 +57,7 @@ header>.interface {
     display: flex;
     align-items: center;
     justify-content: space-between;
+
 }
 
 header a {
@@ -64,6 +65,7 @@ header a {
     text-decoration: none;
     display: inline-block;
     transition: .2s;
+
 }
 
 header nav.menu-desktop a:hover {
@@ -73,24 +75,65 @@ header nav.menu-desktop a:hover {
 
 header nav ul {
     list-style-type: none;
+
 }
 
 header nav.menu-desktop ul li {
     display: inline-block;
     padding: 0 40px;
+
 }
 
-.logo a img{
-    font-size: 20px;    
-} 
+
+
+
+/* --- Fixa APENAS o menu-desktop --- */
+.menu-desktop {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    background: rgba(22, 20, 20, 0.7);
+    /* Fundo semi-transparente (opcional) */
+    padding: 15px 4%;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.menu-desktop .nav-links a {
+    color: #5c5c5c;
+    transition: 0.2s;
+}
+
+
+/* Menu - Substitui o padding dos li por gap */
+.menu-desktop .nav-links .nav-list {
+    display: flex;
+    gap: 80px;
+    /* Equivalente ao seu padding lateral de 40px */
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    width: auto;
+
+}
+
+.menu-desktop .nav-links a:hover {
+    color: #fff;
+    transform: scale(1.08);
+}
+
 
 /* MENU MOBILE */
 btn-open-menu i {
     color: #551a8b;
     font-size: 80px;
     display: none;
-       
-} 
+}
 
 .menu-mobile {
     background-color: #000;
@@ -163,9 +206,16 @@ section.up-site .flex {
     gap: 90px;
 }
 
+
+.up-site .txt-up-site .name h1 span{
+    font-size: 44px;
+    margin: 4px; 
+}
+
 .up-site h1 {
     color: #fff;
     font-size: 34px;
+    padding: 10px 0;
     line-height: 40px;
 }
 
@@ -181,6 +231,7 @@ section.up-site .flex {
 .up-site .img-up-site img {
     position: relative;
     animation: float 2s ease-in-out infinite alternate;
+    padding: 24px;
 }
 
 @keyframes float {
@@ -189,7 +240,7 @@ section.up-site .flex {
     }
 
     100% {
-        top: 30px;
+        top: 40px;
     }
 }
 
@@ -225,7 +276,7 @@ section.specialties .flex {
     margin: 15px 0;
 }
 
-.specialties .specialties-box h3 p{
+.specialties .specialties-box h3 p {
     text-align: justify;
 }
 
@@ -269,11 +320,11 @@ section.about .flex {
 
 }
 
-.btn-social a i:hover{
+.btn-social a i:hover {
     transform: scale(1.08);
     text-decoration: none;
     color: #ab51ff;
-    
+
 }
 
 /*PORTFOLIO*/
@@ -480,27 +531,29 @@ footer .line-footer p a {
     }
 
     /* HEADER */
-    .menu-desktop,
-    .btn-contato {
+    .menu-desktop {
         display: none;
-        color: #551a8b;
+       
     }
 
     .btn-open-menu {
-        display: block; /* Mostra o botão em telas pequenas */
+        display: block;
         cursor: pointer;
         color: #551a8b;
         cursor: pointer;
         border: none;
-        padding: 10px;
+        padding: 4px;
         position: fixed;
-        top: 20px;
-        right: 20px;
+        top: 10px;
+        right: 8px;
+        background: rgba(0, 0, 0, 0.555); 
+        border-radius: 50px;  
     }
-    
+
     .btn-open-menu i {
         color: #551a8b;
         font-size: 40px;   
+        
     } 
 
 
@@ -511,6 +564,10 @@ footer .line-footer p a {
 
     section.up-site {
         padding: 20px 8%;
+    }
+
+    .up-site .txt-up-site .name h1 span{
+        font-size: 28px;
     }
 
     .up-site h1 {
@@ -572,4 +629,3 @@ footer .line-footer p a {
         text-align: center;
     }
 }
-
