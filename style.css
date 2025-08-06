@@ -6,6 +6,32 @@
     font-family: 'Poppins', sans-serif;
 }
 
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible {
+    outline: 2px solid #551a8b;
+    outline-offset: 3px;
+    border-radius: 2px;
+}
+
+
+/* Padronize as durações */
+:root {
+    --transition-fast: 0.2s;
+    --transition-medium: 0.3s;
+    --transition-slow: 0.5s;
+}
+
+/* Exemplo de uso */
+button {
+    transition: all var(--transition-fast) ease;
+}
+
 body {
     background-color: black;
     height: 100vh;
@@ -117,6 +143,30 @@ header nav.menu-desktop ul li {
 }
 
 
+/* Destaque para link ativo */
+.nav-list a.active,
+.menu-mobile nav a.active {
+    color: #551a8b !important;
+    font-weight: 600 !important;
+    position: relative;
+    text-decoration: none;
+
+}
+
+.nav-list a.active::after,
+.menu-mobile nav a.active::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #551a8b;
+}
+
+
+
+
 /* MENU MOBILE */
 /* ============== BOTÃO ABRIR MENU ============== */
 .btn-open-menu i {
@@ -155,6 +205,7 @@ header nav.menu-desktop ul li {
 
 .menu-mobile.open-menu {
     right: 0;
+    transform: translateX(0);
 }
 
 .menu-header {
@@ -220,7 +271,7 @@ header nav.menu-desktop ul li {
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 999;
+    z-index: 998;
     display: none;
 }
 
@@ -497,29 +548,36 @@ footer .line-footer p a {
 /* ================== */
 
 /* STYLES FOR FLOATING MESSAGES */
+
+a:focus,
+button:focus,
+input:focus {
+    outline: 2px solid #551a8b;
+    outline-offset: 2px;
+}
+
 .floating-message {
     position: fixed;
     top: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    color: white;
-    padding: 15px 25px;
+    right: 20px;
+    padding: 15px;
     border-radius: 8px;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
-    z-index: 1000;
     display: flex;
     align-items: center;
-    animation: fadeIn 0.3s ease-out;
+    gap: 10px;
     max-width: 90%;
-    box-sizing: border-box;
+    animation: fadeIn 0.3s ease-out;
+    z-index: 10000;
 }
 
 .message-success {
     background: #551a8b;
+    color: white;
 }
 
 .message-error {
-    background: #f44336;
+    background-color: #F44336;
+    color: white;
 }
 
 .message-icon {
@@ -527,22 +585,35 @@ footer .line-footer p a {
     width: 20px;
     height: 20px;
     fill: white;
-
 }
 
-/* ANIMATIONS */
 @keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(5px);
+    }
+
     to {
         opacity: 1;
-        transform: translateX(-50%) translateY(0);
+        transform: translateY(0);
     }
 }
 
 @keyframes fadeOut {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
     to {
         opacity: 0;
-        transform: translateX(-50%) translateY(-20px);
+        transform: translateY(5px);
     }
+}
+
+/* Seções para acessibilidade */
+section:focus {
+    outline: none;
 }
 
 /* ========== */
@@ -551,6 +622,11 @@ footer .line-footer p a {
 @media screen and (max-width: 1100px) {
 
     /* GENERAL CLASS */
+
+    html {
+        scroll-padding-top: 60px;
+    }
+
     .flex {
         flex-direction: column;
     }
@@ -583,10 +659,12 @@ footer .line-footer p a {
         border: none;
         padding: 4px;
         position: fixed;
-        top: 10px;
-        right: 8px;
         background: rgba(0, 0, 0, 0.555);
         border-radius: 50px;
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        z-index: 999;
     }
 
     .btn-open-menu i {
@@ -595,7 +673,7 @@ footer .line-footer p a {
     }
 
     .menu-mobile {
-        width: 80%;
+        width: 70%;
         right: -80%;
     }
 
