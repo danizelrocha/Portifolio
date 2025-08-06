@@ -18,15 +18,12 @@ input:focus-visible {
     outline-offset: 3px;
     border-radius: 2px;
 }
-
-
 /* Padronize as durações */
 :root {
     --transition-fast: 0.2s;
     --transition-medium: 0.3s;
     --transition-slow: 0.5s;
 }
-
 /* Exemplo de uso */
 button {
     transition: all var(--transition-fast) ease;
@@ -73,7 +70,6 @@ form .btn-enviar input[type=submit]:hover {
     box-shadow: 0px 0px 8px #714d92;
     transform: scale(1.08);
 }
-
 /* HEADER - NAV */
 header {
     padding: 40px 4%;
@@ -104,7 +100,6 @@ header nav ul {
 header nav.menu-desktop ul li {
     display: inline-block;
     padding: 0 40px;
-
 }
 
 .menu-desktop {
@@ -113,9 +108,8 @@ header nav.menu-desktop ul li {
     left: 50%;
     transform: translateX(-50%);
     width: 100%;
-    background: rgba(22, 20, 20, 0.7);
-    /* Fundo semi-transparente */
-    padding: 15px 4%;
+    background-color: rgba(22, 20, 20);
+    padding: 12px 4%;
     z-index: 1000;
     display: flex;
     align-items: center;
@@ -124,7 +118,7 @@ header nav.menu-desktop ul li {
 }
 
 .menu-desktop .nav-links a {
-    color: #5c5c5c;
+    color: #fff;
     transition: 0.2s;
 }
 
@@ -138,7 +132,7 @@ header nav.menu-desktop ul li {
 }
 
 .menu-desktop .nav-links a:hover {
-    color: #fff;
+    color: #ab51ff;
     transform: scale(1.08);
 }
 
@@ -150,7 +144,6 @@ header nav.menu-desktop ul li {
     font-weight: 600 !important;
     position: relative;
     text-decoration: none;
-
 }
 
 .nav-list a.active::after,
@@ -278,11 +271,6 @@ header nav.menu-desktop ul li {
 .menu-mobile.open-menu~.overlay-menu {
     display: block;
 }
-
-/* Bloqueio de rolagem */
-/* body.menu-open {
-    overflow: hidden;
-} */
 
 .mobile-only {
     display: none;
@@ -499,7 +487,7 @@ form textarea::placeholder {
 
 form textarea {
     resize: none;
-    max-height: 200px;
+    max-height: 200px; 
 }
 
 form .btn-enviar {
@@ -549,12 +537,12 @@ footer .line-footer p a {
 
 /* STYLES FOR FLOATING MESSAGES */
 
-a:focus,
+/* a:focus,
 button:focus,
 input:focus {
     outline: 2px solid #551a8b;
     outline-offset: 2px;
-}
+} */
 
 .floating-message {
     position: fixed;

@@ -3,7 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Portfólio de Daniel Rocha, desenvolvedor front-end com experiência em React, Angular e AWS." />
+    <meta
+      name="description"
+      content="Portfólio de Daniel Rocha, desenvolvedor front-end com experiência em React, Angular e AWS."
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="icon" type="image/x-icon" href="images/favicon.png" />
@@ -22,41 +25,41 @@
   </head>
   <body>
     <header>
-  <div class="interface">
-    <!-- Menu Desktop -->
-    <div class="menu-desktop">
-      <nav class="nav-links">
-        <ul class="nav-list">
-          <li><a href="#inicio">Início</a></li>
-          <li><a href="#especialidades">Especialidades</a></li>
-          <li><a href="#sobre">Sobre</a></li>
-          <li><a href="#projetos">Projetos</a></li>
-          <!-- Item será clonado apenas para o mobile via JS -->
-        </ul>
-      </nav>
-    </div>
-
-    <!-- Botão para abrir menu mobile -->
-    <div class="btn-open-menu" id="btn-menu">
-      <i class="bi bi-list"></i>
-    </div>
-
-    <!-- Menu Mobile -->
-    <div class="menu-mobile" id="menu-mobile">
-      <div class="menu-header">
-        <div class="btn-close">
-          <i class="bi bi-x-lg"></i>
+      <div class="interface">
+        <!-- Menu Desktop -->
+        <div class="menu-desktop">
+          <nav class="nav-links">
+            <ul class="nav-list">
+              <li><a href="#inicio">Início</a></li>
+              <li><a href="#especialidades">Especialidades</a></li>
+              <li><a href="#sobre">Sobre</a></li>
+              <li><a href="#projetos">Projetos</a></li>
+              <!-- Item será clonado apenas para o mobile via JS -->
+            </ul>
+          </nav>
         </div>
-      </div>
-      <div class="menu-content">
-        <!-- Conteúdo será injetado pelo JavaScript -->
-      </div>
-    </div>
 
-    <!-- Overlay -->
-    <div class="overlay-menu" id="overlay-menu"></div>
-  </div>
-</header>
+        <!-- Botão para abrir menu mobile -->
+        <div class="btn-open-menu" id="btn-menu">
+          <i class="bi bi-list"></i>
+        </div>
+
+        <!-- Menu Mobile -->
+        <div class="menu-mobile" id="menu-mobile">
+          <div class="menu-header">
+            <div class="btn-close">
+              <i class="bi bi-x-lg"></i>
+            </div>
+          </div>
+          <div class="menu-content">
+            <!-- Conteúdo será injetado pelo JavaScript -->
+          </div>
+        </div>
+
+        <!-- Overlay -->
+        <div class="overlay-menu" id="overlay-menu"></div>
+      </div>
+    </header>
     <main>
       <section id="inicio" class="up-site">
         <div class="interface">
@@ -76,9 +79,7 @@
               </p>
 
               <div class="btn-contato">
-                <a href="#">
-                  <button onclick="location.href='#'">Entre em contato</button>
-                </a>
+                <button id="btn-contato-desktop">Entre em contato</button>
               </div>
             </div>
 

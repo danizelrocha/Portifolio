@@ -1,6 +1,6 @@
-// ==============================
-//  OPEN CLOSED MENU MOBILE BUTTON (VERSÃO CORRIGIDA)
-// ==============================
+// ================================
+//  OPEN CLOSED MENU MOBILE BUTTON
+// ================================
 document.addEventListener("DOMContentLoaded", function () {
   // Elementos do DOM
   const btnMenu = document.getElementById("btn-menu");
@@ -26,13 +26,17 @@ document.addEventListener("DOMContentLoaded", function () {
       // Injeta no menu mobile
       const menuContent = menuMobile.querySelector(".menu-content");
       menuContent.innerHTML = "";
-      menuContent.appendChild(document.createElement("nav")).appendChild(navMobile);
+      menuContent
+        .appendChild(document.createElement("nav"))
+        .appendChild(navMobile);
     }
 
     menuMobile.classList.toggle("open-menu");
     body.classList.toggle("menu-open");
-    overlayMenu.style.display = menuMobile.classList.contains("open-menu") ? "block" : "none";
-    
+    overlayMenu.style.display = menuMobile.classList.contains("open-menu")
+      ? "block"
+      : "none";
+
     // Acessibilidade: Foca no botão apropriado
     if (menuMobile.classList.contains("open-menu")) {
       btnClose.focus();
@@ -47,20 +51,17 @@ document.addEventListener("DOMContentLoaded", function () {
   overlayMenu.addEventListener("click", toggleMenu);
 
   // ==============================
-  //  NAVEGAÇÃO COM FECHAMENTO DO MENU (CORREÇÃO PRINCIPAL)
+  //  NAVIGATION WITH MENU CLOSURE
   // ==============================
   function handleMenuLinkClick(e) {
     // Fecha o menu primeiro
     if (menuMobile.classList.contains("open-menu")) {
       toggleMenu();
     }
-    
-    // Rolagem suave será tratada pelo CSS (scroll-behavior: smooth)
-    // Não precisa prevenir o comportamento padrão se os IDs estiverem corretos
   }
 
   // Adiciona event listeners aos links do menu mobile
-  menuMobile.addEventListener("click", function(e) {
+  menuMobile.addEventListener("click", function (e) {
     // Verifica se o clique foi em um link âncora
     const link = e.target.closest('a[href^="#"]');
     if (link) {
@@ -68,12 +69,14 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  // ==============================
+  // ===========================
   //  HIGHLIGHT ACTIVE SECTION
-  // ==============================
+  // ===========================
   function highlightActiveSection() {
     const sections = document.querySelectorAll("section");
-    const navLinks = document.querySelectorAll(".nav-list a, .menu-mobile nav a");
+    const navLinks = document.querySelectorAll(
+      ".nav-list a, .menu-mobile nav a"
+    );
 
     sections.forEach((section) => {
       const rect = section.getBoundingClientRect();
@@ -96,7 +99,21 @@ document.addEventListener("DOMContentLoaded", function () {
   highlightActiveSection();
 });
 
-// ... (o resto do seu código permanece igual)
+// ===================
+//  SCROLL TO CONTATO 
+// ===================
+function scrollToContato() {
+  const contatoSection = document.querySelector("#contato");
+  if (contatoSection) {
+    const headerHeight = document.querySelector("header").offsetHeight;
+    const targetPosition = contatoSection.offsetTop - headerHeight;
+
+    window.scrollTo({
+      top: targetPosition,
+      behavior: "smooth",
+    });
+  }
+}
 
 // =====================
 // SOCIAL MEDIA BUTTONS
@@ -109,23 +126,25 @@ function setupSocialButtons() {
     "https://github.com/danizelrocha",
   ];
 
-  document.querySelectorAll(".btn-social a.social-link").forEach((button, index) => {
-    const linkIndex = index % socialLinks.length;
-    button.href = socialLinks[linkIndex];
-    button.target = "_blank";
-    button.rel = "noopener noreferrer"; // Segurança
-    
-    // Acessibilidade
-    const platform = ["Instagram", "LinkedIn", "Medium", "GitHub"][linkIndex];
-    button.setAttribute("aria-label", `Meu perfil no ${platform}`);
-    
-    // Mantém apenas o ícone
-    const icon = button.querySelector("i");
-    if (icon) {
-      button.innerHTML = "";
-      button.appendChild(icon);
-    }
-  });
+  document
+    .querySelectorAll(".btn-social a.social-link")
+    .forEach((button, index) => {
+      const linkIndex = index % socialLinks.length;
+      button.href = socialLinks[linkIndex];
+      button.target = "_blank";
+      button.rel = "noopener noreferrer"; // Segurança
+
+      // Acessibilidade
+      const platform = ["Instagram", "LinkedIn", "Medium", "GitHub"][linkIndex];
+      button.setAttribute("aria-label", `Meu perfil no ${platform}`);
+
+      // Mantém apenas o ícone
+      const icon = button.querySelector("i");
+      if (icon) {
+        button.innerHTML = "";
+        button.appendChild(icon);
+      }
+    });
 }
 
 // ==============
@@ -134,13 +153,17 @@ function setupSocialButtons() {
 const DEFAULT_SUCCESS_DURATION = 8000;
 const DEFAULT_ERROR_DURATION = 5000;
 
-function showMessage(content = "", type = "success", duration = type === "success" 
-  ? DEFAULT_SUCCESS_DURATION 
-  : DEFAULT_ERROR_DURATION) {
-  
+function showMessage(
+  content = "",
+  type = "success",
+  duration = type === "success"
+    ? DEFAULT_SUCCESS_DURATION
+    : DEFAULT_ERROR_DURATION
+) {
   const iconPaths = {
     success: "M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z",
-    error: "M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z",
+    error:
+      "M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z",
   };
 
   const msgDiv = document.createElement("div");
@@ -152,7 +175,9 @@ function showMessage(content = "", type = "success", duration = type === "succes
     <svg class="message-icon" viewBox="0 0 24 24" aria-hidden="true">
       <path d="${iconPaths[type]}"/>
     </svg>
-    ${type === "success" ? `
+    ${
+      type === "success"
+        ? `
       <div class="message-content">
         <strong>Obrigado pelo seu contato!</strong>
         <div class="message-detail">
@@ -160,7 +185,9 @@ function showMessage(content = "", type = "success", duration = type === "succes
           Agradeço pelo contato e responderei em breve.
         </div>
       </div>
-    ` : `<div class="message-text">${content}</div>`}
+    `
+        : `<div class="message-text">${content}</div>`
+    }
   `;
 
   document.body.appendChild(msgDiv);
@@ -185,7 +212,8 @@ async function handleFormSubmit(form) {
       headers: { Accept: "application/json" },
     });
 
-    if (!response.ok) throw new Error(`Erro ${response.status}: ${response.statusText}`);
+    if (!response.ok)
+      throw new Error(`Erro ${response.status}: ${response.statusText}`);
 
     showMessage("", "success");
     form.reset();
@@ -210,7 +238,7 @@ function setupFormSubmission() {
   });
 
   // Acessibilidade: Validação
-  form.querySelectorAll("input, textarea").forEach(input => {
+  form.querySelectorAll("input, textarea").forEach((input) => {
     input.addEventListener("invalid", () => {
       input.setAttribute("aria-invalid", "true");
     });
@@ -221,6 +249,18 @@ function setupFormSubmission() {
     });
   });
 }
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  // Configura o botão de contato
+  const btnContatoDesktop = document.getElementById("btn-contato-desktop");
+  if (btnContatoDesktop) {
+    btnContatoDesktop.addEventListener("click", scrollToContato);
+  }
+
+  setupSocialButtons();
+  setupFormSubmission();
+});
 
 // Inicialização
 document.addEventListener("DOMContentLoaded", () => {
