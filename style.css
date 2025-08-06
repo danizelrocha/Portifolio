@@ -1,4 +1,7 @@
-/* GENERAL */
+/* =========*/
+/*  GENERAL */
+/* =========*/
+
 * {
     margin: 0;
     padding: 0;
@@ -18,13 +21,14 @@ input:focus-visible {
     outline-offset: 3px;
     border-radius: 2px;
 }
-/* Padronize as durações */
+
+/* Padroniza as durações */
 :root {
     --transition-fast: 0.2s;
     --transition-medium: 0.3s;
     --transition-slow: 0.5s;
 }
-/* Exemplo de uso */
+
 button {
     transition: all var(--transition-fast) ease;
 }
@@ -70,9 +74,13 @@ form .btn-enviar input[type=submit]:hover {
     box-shadow: 0px 0px 8px #714d92;
     transform: scale(1.08);
 }
-/* HEADER - NAV */
+
+/* ==============*/
+/*  HEADER - NAV */
+/* ==============*/
+
 header {
-    padding: 40px 4%;
+    padding: 30px 4%;
 }
 
 header>.interface {
@@ -119,7 +127,7 @@ header nav.menu-desktop ul li {
 
 .menu-desktop .nav-links a {
     color: #fff;
-    transition: 0.2s;
+    transition: 0.1s;
 }
 
 .menu-desktop .nav-links .nav-list {
@@ -158,10 +166,11 @@ header nav.menu-desktop ul li {
 }
 
 
+/* =============*/
+/*  MENU MOBILE */
+/* =============*/
 
-
-/* MENU MOBILE */
-/* ============== BOTÃO ABRIR MENU ============== */
+/* BOTÃO ABRIR MENU */
 .btn-open-menu i {
     color: #551a8b;
     font-size: 3.5rem;
@@ -173,16 +182,6 @@ header nav.menu-desktop ul li {
     transform: scale(1.1);
 }
 
-@media (min-width: 1100px) {
-    .btn-open-menu i {
-        display: none;
-        /* Esconde ícone em desktop RESOLVER ISSO */
-    }
-
-}
-
-
-/* ============== MENU MOBILE ============== */
 .menu-mobile {
     background-color: #000;
     height: 100vh;
@@ -276,7 +275,10 @@ header nav.menu-desktop ul li {
     display: none;
 }
 
-/* UP-SITE */
+/* ==========*/
+/*  UP-SITE  */
+/* ==========*/
+
 section.up-site {
     padding: 40px 4%;
 }
@@ -324,7 +326,10 @@ section.up-site .flex {
     }
 }
 
-/* SPECIALTIES */
+/* ============*/
+/*  SPECIALTIES*/
+/* ============*/
+
 section.specialties {
     padding: 40px 4%;
 }
@@ -360,7 +365,9 @@ section.specialties .flex {
     text-align: justify;
 }
 
-/* ABOUT */
+/* ==========*/
+/*   ABOUT   */
+/* ==========*/
 section.about {
     padding: 80px 4%;
 }
@@ -405,7 +412,9 @@ section.about .flex {
     color: #ab51ff;
 }
 
-/*PORTFOLIO*/
+/*===========*/
+/* PORTFOLIO */
+/*===========*/
 section.portfolio {
     padding: 80px 4%;
     box-shadow: 0 0 40px 10px #ffffff17;
@@ -453,7 +462,9 @@ section.portfolio .flex {
     opacity: 1;
 }
 
-/* FORM */
+/* =========*/
+/*   FORM   */
+/* =========*/
 section.form {
     padding: 80px 4%;
 }
@@ -487,7 +498,7 @@ form textarea::placeholder {
 
 form textarea {
     resize: none;
-    max-height: 200px; 
+    max-height: 200px;
 }
 
 form .btn-enviar {
@@ -504,7 +515,9 @@ form .btn-enviar input[type=submit] {
     transition: .2s;
 }
 
-/* FOOTER */
+/* ========== */
+/*   FOOTER   */
+/* ========== */
 footer {
     padding: 40px 4%;
     box-shadow: 0 0 40px 10px #ffffff17;
@@ -534,15 +547,6 @@ footer .line-footer p a {
 /* ================== */
 /* AUTOMATIC RESPONSE */
 /* ================== */
-
-/* STYLES FOR FLOATING MESSAGES */
-
-/* a:focus,
-button:focus,
-input:focus {
-    outline: 2px solid #551a8b;
-    outline-offset: 2px;
-} */
 
 .floating-message {
     position: fixed;
@@ -607,7 +611,15 @@ section:focus {
 /* ========== */
 /*   @MEDIA   */
 /* ========== */
-@media screen and (max-width: 1100px) {
+
+@media screen and (min-width: 1200px) {
+    .btn-open-menu i {
+        display: none;
+        /* Esconde ícone em desktop RESOLVER ISSO */
+    }
+}
+
+@media screen and (max-width: 1200px) {
 
     /* GENERAL CLASS */
 
@@ -636,12 +648,10 @@ section:focus {
     /* HEADER */
     .menu-desktop {
         display: none;
-
     }
 
     .btn-open-menu {
         display: block;
-        cursor: pointer;
         color: #551a8b;
         cursor: pointer;
         border: none;
@@ -649,7 +659,6 @@ section:focus {
         position: fixed;
         background: rgba(0, 0, 0, 0.555);
         border-radius: 50px;
-        position: fixed;
         top: 20px;
         right: 20px;
         z-index: 999;
